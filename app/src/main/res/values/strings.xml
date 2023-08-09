@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SOFTTEK-TEST</string>
+    <string name="no_results">No results 😓</string>
+    <string name="retry">Retry</string>
 </resources>
