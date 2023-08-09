@@ -14,8 +14,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        binding.etlogin.setText("Admin")
-        binding.etcontrasena.setText("Password*123")
+     //   binding.etlogin.setText("Admin")
+      //  binding.etcontrasena.setText("Password*123")
         binding.btnlogin.setOnClickListener {
             if (verificaCampos()) {
                 val intent: Intent = Intent(this, MainActivity::class.java)
