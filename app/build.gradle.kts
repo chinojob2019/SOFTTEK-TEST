@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -33,6 +35,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding {
+        enable = true
+    }
+
+    dataBinding{ enable=true}
 }
 
 dependencies {
@@ -41,6 +48,32 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")
+
+
+    // architecture components
+    implementation  ("androidx.core:core-ktx:1.7.0")
+    implementation  ("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
+    implementation  ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation  ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    implementation  ("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.0")
+    implementation  ("androidx.room:room-runtime:2.3.0")
+    implementation  ("androidx.room:room-ktx:2.3.0")
+    implementation  ("androidx.paging:paging-runtime-ktx:3.1.0")
+
+
+
+
+
+
+
+
+
+
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
